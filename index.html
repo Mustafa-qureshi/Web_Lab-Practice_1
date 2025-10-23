@@ -5,126 +5,187 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home | EvolisLabs.AI</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in { animation: fadeInUp 0.8s ease both; }
+  </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 font-sans">
 
-  <!-- Navbar -->
-  <nav class="bg-blue-600 text-white p-4 flex justify-between items-center">
-    <h1 class="text-2xl font-bold">EvolisLabs.AI</h1>
+  <!-- 1. Navbar -->
+  <nav class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-4 flex justify-between items-center fade-in shadow-md">
+    <h1 class="text-2xl font-bold tracking-wide">EvolisLabs.AI</h1>
     <div class="space-x-4">
-      <a href="index.html" class="hover:underline">Home</a>
-      <a href="src/pages/about/about.html" class="hover:underline">About</a>
-      <a href="src/pages/contact/contact.html" class="hover:underline">Contact</a>
-      <a href="src/pages/signup/signup.html" class="hover:underline">Sign Up</a>
-      <a href="src/pages/signin/signin.html" class="hover:underline">Sign In</a>
+      <a href="index.html" class="hover:text-gray-200 transition">Home</a>
+      <a href="pages/about/about.html" class="hover:text-gray-200 transition">About</a>
+      <a href="pages/services/services.html" class="hover:text-gray-200 transition">Services</a>
+      <a href="pages/contact/contact.html" class="hover:text-gray-200 transition">Contact</a>
+      <a href="pages/signup/signup.html" class="hover:text-gray-200 transition font-semibold">Sign Up</a>
+      <a href="pages/signin/signin.html" class="hover:text-gray-200 transition font-semibold">Sign In</a>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="bg-blue-100 text-center py-20">
-    <h2 class="text-4xl font-bold text-blue-700">Welcome to EvolisLabs.AI</h2>
-    <p class="mt-4 text-lg">Build your dreams with simplicity and style.</p>
-    <button class="mt-6 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Get Started</button>
+  <!-- 2. Hero Section -->
+  <section class="relative bg-gradient-to-r from-blue-100 to-indigo-100 text-center py-32 fade-in overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="w-full h-full bg-[url('https://images.unsplash.com/photo-1581091012184-0c2e45c3e3eb?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-10"></div>
+    </div>
+    <div class="relative z-10">
+      <h2 class="text-5xl font-bold text-blue-700 mb-4 animate-bounce">Welcome to EvolisLabs.AI</h2>
+      <p class="text-lg text-gray-700 mb-6 max-w-xl mx-auto">We build intelligent, beautiful, and scalable software solutions tailored to your business needs.</p>
+      <button class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-10 py-3 rounded-lg shadow-lg hover:scale-105 transition transform font-semibold">Get Started</button>
+    </div>
   </section>
-<!-- 🌐 Software House Services Section -->
-<section class="services py-16 px-8 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
-  <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-700">
-    Our Software Services
-  </h2>
 
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-    <div class="service-card">
-      💻 <h3>Web Development</h3>
-      <p>Building responsive, modern websites with cutting-edge frameworks and SEO optimization.</p>
+  <!-- 3. Features Grid -->
+  <section class="py-16 px-8 fade-in">
+    <h2 class="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white shadow-lg rounded-xl p-6 hover:scale-105 hover:shadow-2xl transition transform text-center">
+        <i class="fas fa-rocket text-blue-600 text-4xl"></i>
+        <h3 class="text-xl font-semibold mt-4">Fast Delivery</h3>
+        <p class="text-gray-600 mt-2">Quick turnaround time for all projects without compromising quality.</p>
+      </div>
+      <div class="bg-white shadow-lg rounded-xl p-6 hover:scale-105 hover:shadow-2xl transition transform text-center">
+        <i class="fas fa-lock text-blue-600 text-4xl"></i>
+        <h3 class="text-xl font-semibold mt-4">Secure Solutions</h3>
+        <p class="text-gray-600 mt-2">Data privacy and security are always top priorities.</p>
+      </div>
+      <div class="bg-white shadow-lg rounded-xl p-6 hover:scale-105 hover:shadow-2xl transition transform text-center">
+        <i class="fas fa-lightbulb text-blue-600 text-4xl"></i>
+        <h3 class="text-xl font-semibold mt-4">Innovative Ideas</h3>
+        <p class="text-gray-600 mt-2">Creative solutions that scale seamlessly with your business growth.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="service-card">
-      📱 <h3>Mobile App Development</h3>
-      <p>Crafting seamless, high-performance Android and iOS applications.</p>
+  <!-- 4. About Section -->
+  <section class="bg-gray-50 py-16 px-8 fade-in flex flex-col md:flex-row items-center gap-12">
+    <div class="md:w-1/2 flex justify-center">
+      <i class="fas fa-brain text-indigo-600 text-[8rem] animate-pulse"></i>
     </div>
-
-    <div class="service-card">
-      🎨 <h3>UI/UX Design</h3>
-      <p>Designing beautiful, intuitive, and user-focused interfaces for every device.</p>
+    <div class="md:w-1/2">
+      <h2 class="text-3xl font-bold mb-4">About EvolisLabs.AI</h2>
+      <p class="text-gray-600 leading-relaxed">We specialize in web & mobile development, AI, cloud solutions, and UI/UX design to transform businesses. Our mission is to deliver high-quality digital products that drive growth and innovation.</p>
     </div>
+  </section>
 
-    <div class="service-card">
-      ☁️ <h3>Cloud Solutions</h3>
-      <p>Deploying secure and scalable cloud environments for faster business growth.</p>
+  <!-- 5. Services Cards -->
+  <section class="py-16 px-8 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 fade-in">
+    <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white shadow-md p-6 rounded-2xl hover:shadow-xl transition transform hover:-translate-y-2 text-center">
+        <i class="fas fa-laptop-code text-blue-600 text-4xl"></i>
+        <h3 class="text-xl font-semibold mt-4">Web Development</h3>
+        <p class="text-gray-600 mt-2">Responsive websites with SEO & modern frameworks.</p>
+      </div>
+      <div class="bg-white shadow-md p-6 rounded-2xl hover:shadow-xl transition transform hover:-translate-y-2 text-center">
+        <i class="fas fa-mobile-alt text-blue-600 text-4xl"></i>
+        <h3 class="text-xl font-semibold mt-4">Mobile Apps</h3>
+        <p class="text-gray-600 mt-2">High-performance Android & iOS applications.</p>
+      </div>
+      <div class="bg-white shadow-md p-6 rounded-2xl hover:shadow-xl transition transform hover:-translate-y-2 text-center">
+        <i class="fas fa-robot text-blue-600 text-4xl"></i>
+        <h3 class="text-xl font-semibold mt-4">AI Solutions</h3>
+        <p class="text-gray-600 mt-2">Smart automation and data-driven insights.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="service-card">
-      🧠 <h3>Artificial Intelligence</h3>
-      <p>Adding intelligence to your systems through data-driven AI and automation.</p>
+  <!-- 6. Testimonials -->
+  <section class="py-16 px-8 fade-in bg-white">
+    <h2 class="text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="p-6 bg-gray-50 rounded-xl shadow-md hover:scale-105 transition transform">
+        <p class="text-gray-600 italic">“EvolisLabs transformed our digital presence. Highly recommended!”</p>
+        <p class="mt-4 font-semibold text-right">- Jane Doe</p>
+      </div>
+      <div class="p-6 bg-gray-50 rounded-xl shadow-md hover:scale-105 transition transform">
+        <p class="text-gray-600 italic">“Fast, reliable, and creative solutions for our app development.”</p>
+        <p class="mt-4 font-semibold text-right">- John Smith</p>
+      </div>
+      <div class="p-6 bg-gray-50 rounded-xl shadow-md hover:scale-105 transition transform">
+        <p class="text-gray-600 italic">“Professional team with excellent support.”</p>
+        <p class="mt-4 font-semibold text-right">- Mary Johnson</p>
+      </div>
     </div>
+  </section>
 
-    <div class="service-card">
-      🛒 <h3>E-Commerce Development</h3>
-      <p>Creating powerful online stores with payment integrations and smooth UX.</p>
+  <!-- 7. Stats / Counters -->
+  <section class="py-16 px-8 fade-in bg-gradient-to-r from-blue-50 to-indigo-50 text-center">
+    <h2 class="text-3xl font-bold mb-12">Our Achievements</h2>
+    <div class="grid sm:grid-cols-3 gap-8">
+      <div class="p-6 bg-white rounded-xl shadow-md hover:scale-105 transition transform">
+        <h3 class="text-4xl font-bold text-blue-600">120+</h3>
+        <p class="text-gray-600 mt-2">Projects Completed</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-md hover:scale-105 transition transform">
+        <h3 class="text-4xl font-bold text-blue-600">50+</h3>
+        <p class="text-gray-600 mt-2">Happy Clients</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-md hover:scale-105 transition transform">
+        <h3 class="text-4xl font-bold text-blue-600">10</h3>
+        <p class="text-gray-600 mt-2">Years of Experience</p>
+      </div>
     </div>
+  </section>
 
-    <div class="service-card">
-      🧩 <h3>Software Consultancy</h3>
-      <p>Providing expert guidance for digital transformation and project success.</p>
+  <!-- 8. Call-to-Action -->
+  <section class="py-16 px-8 fade-in bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center rounded-xl mx-8 my-12 shadow-lg">
+    <h2 class="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
+    <p class="mb-6">Join hundreds of businesses growing with EvolisLabs.AI</p>
+    <button class="bg-white text-blue-600 px-10 py-3 rounded-lg font-semibold hover:scale-105 hover:bg-gray-100 transition transform">Get Started</button>
+  </section>
+
+  <!-- 9. FAQ Section -->
+  <section class="py-16 px-8 fade-in">
+    <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+    <div class="max-w-3xl mx-auto space-y-4">
+      <div class="p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-xl transition">
+        <h3 class="font-semibold mb-2">What services do you offer?</h3>
+        <p class="text-gray-600">Web & mobile development, AI solutions, cloud, UI/UX design, and more.</p>
+      </div>
+      <div class="p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-xl transition">
+        <h3 class="font-semibold mb-2">How long does a project take?</h3>
+        <p class="text-gray-600">Depends on scope; usually 1-6 months.</p>
+      </div>
+      <div class="p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-xl transition">
+        <h3 class="font-semibold mb-2">Do you provide post-launch support?</h3>
+        <p class="text-gray-600">Yes, maintenance and long-term support are included.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="service-card">
-      🧾 <h3>Quality Assurance & Testing</h3>
-      <p>Ensuring flawless user experiences through automated and manual testing.</p>
+  <!-- 10. Partners -->
+  <section class="py-16 px-8 fade-in bg-gray-50">
+    <h2 class="text-3xl font-bold text-center mb-12">Our Partners</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <h3 class="text-xl font-semibold">Systems Limited</h3>
+        <p class="text-gray-600 mt-1">Karachi</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <h3 class="text-xl font-semibold">10Pearls</h3>
+        <p class="text-gray-600 mt-1">Karachi</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <h3 class="text-xl font-semibold">NetSol Technologies</h3>
+        <p class="text-gray-600 mt-1">Lahore</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+        <h3 class="text-xl font-semibold">TRG Pakistan</h3>
+        <p class="text-gray-600 mt-1">Karachi</p>
+      </div>
     </div>
+  </section>
 
-    <div class="service-card">
-      ⚙️ <h3>Maintenance & Support</h3>
-      <p>Offering long-term support and optimization for all your software solutions.</p>
-    </div>
-
-    <div class="service-card">
-      🏢 <h3>Custom ERP Systems</h3>
-      <p>Developing tailored enterprise software to streamline your organization’s workflow.</p>
-    </div>
-  </div>
-</section>
-
-<style>
-/* 🎨 Extra CSS (No JS, works with Tailwind) */
-.services {
-  animation: fadeInUp 0.8s ease both;
-}
-
-/* Card styling */
-.service-card {
-  @apply bg-white/80 backdrop-blur-md border border-white/60 shadow-lg p-6 rounded-2xl transition-transform duration-300 ease-out hover:-translate-y-2 hover:shadow-2xl;
-}
-
-/* Card text */
-.service-card h3 {
-  @apply text-xl font-semibold mb-2 text-gray-800 inline-block;
-}
-
-.service-card p {
-  @apply text-gray-600 text-sm leading-relaxed;
-}
-
-/* Fade animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-</style>
-
-
-
-  <!-- Footer -->
-  <footer class="bg-blue-600 text-white text-center py-4 mt-10">
-    © EvolisLabs.AI 2025.
+  <!-- 11. Footer -->
+  <footer class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center py-6 fade-in shadow-inner">
+    <p>© EvolisLabs.AI 2025. All Rights Reserved.</p>
   </footer>
 
 </body>

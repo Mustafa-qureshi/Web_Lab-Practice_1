@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | EvolisLabs.AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+
+  <!-- 1. Navbar -->
+  <nav class="bg-blue-600 text-white p-4 flex justify-between items-center shadow-md">
+    <h1 class="text-2xl font-bold">EvolisLabs.AI</h1>
+    <div class="space-x-4">
+      <a href="../../../index.html" class="hover:text-gray-200 transition">Home</a>
+      <a href="../about/about.html" class="hover:text-gray-200 transition">About</a>
+      <a href="../contact/contact.html" class="hover:text-gray-200 transition font-semibold">Contact</a>
+      <a href="../signup/signup.html" class="hover:text-gray-200 transition">Sign Up</a>
+      <a href="../signin/signin.html" class="hover:text-gray-200 transition">Sign In</a>
+    </div>
+  </nav>
+
+  <!-- 2. Hero / Banner -->
+  <section class="bg-gradient-to-r from-blue-100 to-indigo-100 text-center py-24">
+    <h2 class="text-5xl font-bold text-blue-700 mb-4">Get in Touch</h2>
+    <p class="text-lg text-gray-700 max-w-xl mx-auto">We’d love to hear from you! Reach out for queries, support, or just to say hello.</p>
+  </section>
+
+  <!-- 3. Contact Form -->
+  <section class="max-w-2xl mx-auto mt-10 bg-white p-8 shadow-lg rounded-xl">
+    <h3 class="text-3xl font-bold mb-6 text-center">Contact Form</h3>
+    <form action="https://formspree.io/f/mqayjbnv" method="POST" class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium mb-1">Name</label>
+        <input type="text" name="name" required class="w-full border p-2 rounded focus:ring-2 focus:ring-blue-400"/>
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1">Email</label>
+        <input type="email" name="email" required class="w-full border p-2 rounded focus:ring-2 focus:ring-blue-400"/>
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1">Message</label>
+        <textarea name="message" required class="w-full border p-2 rounded focus:ring-2 focus:ring-blue-400"></textarea>
+      </div>
+      <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Send Message</button>
+    </form>
+  </section>
+
+  <!-- 4. Contact Info -->
+  <section class="py-16 px-8 text-center">
+    <h3 class="text-3xl font-bold mb-8">Our Contact Info</h3>
+    <div class="grid sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-1">
+        📍 <h4 class="text-xl font-semibold mt-2">Office</h4>
+        <p class="text-gray-600 mt-1">Plaza #35, DHA Raya Fairways, Defence, Lahore</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-1">
+        ✉️ <h4 class="text-xl font-semibold mt-2">Email</h4>
+        <p class="text-gray-600 mt-1">Evolislabs.ai@gamil.com</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-1">
+        📞 <h4 class="text-xl font-semibold mt-2">Phone</h4>
+        <p class="text-gray-600 mt-1">03255380235</p>
+      </div>
+    </div>
+  </section>
+
+ <!-- 5. Google Map -->
+<section class="py-16 px-8 text-center">
+  <h3 class="text-3xl font-bold mb-6">Find Us Here</h3>
+  <div class="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-lg">
+    <iframe class="w-full h-96"
+      src="https://www.google.com/maps?q=DHA+Raya+Fairways+Lahore&output=embed"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+
+  <!-- 6. Footer -->
+  <footer class="bg-blue-600 text-white text-center py-6">
+    <p>© EvolisLabs.AI 2025. All Rights Reserved.</p>
+    <p class="mt-2 text-sm"><a href="../../../index.html" class="hover:underline">Home</a> | <a href="../about/about.html" class="hover:underline">About</a> | <a href="../contact/contact.html" class="hover:underline">Contact</a></p>
+  </footer>
+
+</body>
+</html>
